@@ -1,0 +1,136 @@
+.nav {
+  background: #232323;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+
+  .redirect-container {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+
+    .redirect-button {
+      margin: 0 !important;
+      border-bottom: #34AA55 solid 2px;
+      transition: linear all .2s;
+      cursor: pointer;
+      padding: 0 10px;
+
+      &:hover {
+        padding: 5px 10px;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .login-button {
+    border-radius: 10px;
+    border: 2px solid #34AA55;
+    background: none;
+    width: 125px;
+    height: 38px;
+    color: white !important;
+    font-size: 16px;
+    font-weight: 600;
+    transition: linear all .2s;
+
+    &:hover {
+      transform: scale(1.1);
+      background: #248a3c;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  .logo {
+    width: 120px;
+    height: 45px;
+    cursor: pointer;
+  }
+
+  .side-menu-button {
+    display: none;
+  }
+
+  .side-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    .side-menu-button {
+      display: none;
+    }
+
+    .side-menu {
+      display: none;
+
+
+      .redirect-button-side-menu {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 10px 20px;
+
+    .redirect-container {
+      display: none;
+    }
+
+    .login-button {
+      display: none;
+    }
+
+    .side-menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .side-menu {
+      display: none;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      justify-content: center;
+      right: 0;
+      top: 66px;
+      background: #248a3c;
+      height: 50vh;
+      width: 50vw;
+      text-align: center;
+      gap: 30px;
+
+      .redirect-button-side-menu {
+        margin: 0 !important;
+        border-bottom: #fff solid 2px;
+        transition: linear all .2s;
+        cursor: pointer;
+        padding: 0 10px;
+
+        &:hover {
+          padding: 5px 10px;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}

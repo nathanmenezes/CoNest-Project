@@ -1,0 +1,16 @@
+<nav class="nav">
+  <img src="assets/logo.png" class="logo">
+  <div class="redirect-container">
+    <p class="redirect-button">Home</p>
+    <p class="redirect-button">ONGs</p>
+    <p class="redirect-button">Sobre Nós</p>
+  </div>
+  <button class="login-button">Login</button>
+  <mat-icon class="side-menu-button" (click)="openSideDialog()" *ngIf="elementDisplay === 'none'">format_align_justify</mat-icon>
+  <mat-icon class="side-menu-button" (click)="openSideDialog()" *ngIf="elementDisplay === 'flex'">close</mat-icon>
+  <div class="side-menu" [ngStyle]="{ display: elementDisplay }">
+      <p class="redirect-button-side-menu">Home</p>
+      <p class="redirect-button-side-menu">ONGs</p>
+      <p class="redirect-button-side-menu">Sobre Nós</p>
+  </div>
+</nav>

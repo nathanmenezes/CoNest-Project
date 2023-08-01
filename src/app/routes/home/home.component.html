@@ -1,0 +1,83 @@
+<div class="background-dark page">
+  <app-nav-bar></app-nav-bar>
+  <div class="container page-content">
+    <!-- 'HOME' SECTION-->
+    <section class="main-container">
+      <div class="main-content">
+        <div class="main-principal-content">
+          <h2>
+            Conheça<br>
+            A Nossa Plataforma
+          </h2>
+          <p>
+            "Conest" é uma plataforma que promove visibilidade para ONGs em uma rede social inclusiva, permitindo que
+            compartilhem suas missões, projetos e necessidades com uma ampla comunidade de usuários engajados.
+          </p>
+          <div class="main-buttons">
+            <button class="page-button">Conheça as ONGs</button>
+            <button class="page-button">Sobre Nós</button>
+          </div>
+        </div>
+        <img src="assets/main-img.png" alt="peoples with some deficits">
+      </div>
+      <div class="main-infos">
+        <app-main-info number="1"
+                       title="Escolha a ONG de Sua Preferencia"
+                       text="Você escolhe qual ONG você deseja contribuir ou conhecer"
+        >
+        </app-main-info>
+        <app-main-info number="2"
+                       title="Conheça a ONG"
+                       text="Faça um passeio virtual para conhecer o espaço das ONGs"></app-main-info>
+        <app-main-info number="3"
+                       title="Contribua"
+                       text="Ajude ONGs e faça do mundo um lugar melhor"></app-main-info>
+      </div>
+    </section>
+    <!-- 'DOE' SECTION-->
+    <section class="donate-section">
+      <div class="donate-principal-content">
+        <h2>
+          Doe e <span class="mark-text">salve.</span><br> Transforme<br> vidas<span class="mark-text">.</span>
+        </h2>
+        <div class="donate-subtitle">
+          <span class="rectangle"></span>
+          <h4>SEJA A <span class="mark-text">MUDANÇA</span> QUE VOCÊ QUER NO<br> MUNDO.</h4>
+        </div>
+        <p>
+          Faça a diferença! Contribua com a plataforma "Conest" e apoie projetos sociais importantes.
+          Sua doação é fundamental para ajudar ONGs e causas impactantes. Junte-se a nós e compartilhe esperança!
+        </p>
+        <button class="page-button">Contribua</button>
+      </div>
+      <img class="w-40" src="assets/donate-img.png" alt="peoples sending balloons">
+    </section>
+    <!--'VANTAGENS' SECTION-->
+    <section class="advantages-section">
+      <div class="advantages-header">
+        <h2>
+          Quais as vantagens de utilizar a CoNest?
+        </h2>
+        <h4>
+          Veja abaixo as principais vantagens de utilizar a nossa plataforma!
+        </h4>
+      </div>
+      <div class="advantages-cards">
+        <img src=>
+        <app-advantages-card [img]="'assets/search-ong-img.png'"
+                             [title]="'Pesquise ONGs Próximas'"
+                             [text]="'Explore e descubra ONGs próximas a você por meio do nosso sistema de busca baseado em localização. Com a Conest, você pode encontrar organizações que atuam na sua região, permitindo que você se conecte com projetos sociais e causas locais. Ao apoiar ONGs próximas, você contribui para o desenvolvimento e melhorias em sua própria comunidade.'"></app-advantages-card>
+        <app-advantages-card [img]="'assets/secure-ongs-img.png'"
+                             [title]="'ONGs Confiaveis'"
+                             [text]="'Sua segurança e confiança são prioridades para nós. Na Conest, garantimos que todas as ONGs cadastradas passem por um rigoroso processo de verificação. Somente ONGs confiáveis e comprometidas com suas missões são aprovadas na plataforma. Dessa forma, você pode doar com tranquilidade, sabendo que sua contribuição irá para as mãos certas.'"></app-advantages-card>
+        <app-advantages-card [img]="'assets/donate-secure-img.png'"
+                             [title]="'Doe Seguradamente'"
+                             [text]="'Queremos proporcionar a você uma experiência de doação segura e transparente. Com a verificação minuciosa de cada ONG cadastrada, podemos assegurar que sua doação irá para o lugar certo, impactando positivamente as causas que você deseja apoiar. Seu ato de generosidade é valorizado e respeitado em nossa plataforma.'"></app-advantages-card>
+        <app-advantages-card [img]="'assets/peoples-disables-img.png'"
+                             [title]="'Veja Como Sua Doação Impacta'"
+                             [text]="'Através do nosso feed interativo, você pode acompanhar de perto o impacto positivo das suas doações. Veja como suas contribuições estão gerando mudanças significativas nas vidas das pessoas beneficiadas pelas ONGs. Seu apoio é valorizado e retribuído com transparência, mostrando como juntos podemos transformar vidas e construir um mundo melhor.'"></app-advantages-card>
+      </div>
+    </section>
+  </div>
+  <app-footer></app-footer>
+</div>
