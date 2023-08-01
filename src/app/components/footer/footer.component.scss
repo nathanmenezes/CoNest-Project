@@ -1,15 +1,29 @@
-footer{
+footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #232323;
   padding: 50px 100px 50px 100px;
-  .media-links{
+
+  .media-links {
     display: flex;
     align-items: center;
     gap: 20px;
-    img{
+
+    img {
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    align-items: center;
+    flex-direction: column;
+
+    .media-links {
+      margin-top: 20px;
+      flex-direction: column;
     }
   }
 }
