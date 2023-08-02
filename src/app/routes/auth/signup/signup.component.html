@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()" class="signup">
+  <div class="form-header">
+    <h2>
+      Crie sua conta
+    </h2>
+    <h4>
+      Preencha seus dados
+    </h4>
+  </div>
+  <div class="form-container">
+    <div class="form-inputs-container">
+      <mat-form-field class="form-group">
+        <mat-label>Apelido</mat-label>
+        <input matInput [(ngModel)]="user.nickname" name="nickname" required/>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <mat-label>CPF</mat-label>
+        <input matInput [(ngModel)]="user.cpf" name="cpf" required/>
+      </mat-form-field>
+    </div>
+    <div class="form-inputs-container">
+      <mat-form-field class="form-group col-md-6">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="user.firstName" name="firstName" required/>
+      </mat-form-field>
+      <mat-form-field class="form-group col-md-6">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput [(ngModel)]="user.lastName" name="lastName" required/>
+      </mat-form-field>
+    </div>
+    <div class="form-inputs-container">
+      <mat-form-field class="form-group">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="user.email" name="email" required/>
+      </mat-form-field>
+      <mat-form-field class="form-group">
+        <input matInput [(ngModel)]="user.password" placeholder="Password" [type]="hide ? 'password' : 'text'" required>
+        <mat-icon style="color: #2c2c2c" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button type="submit" color="primary">Sign Up</button>
+</form>

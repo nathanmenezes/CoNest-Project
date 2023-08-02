@@ -12,6 +12,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatIconModule} from "@angular/material/icon";
 import { MainInfoComponent } from './routes/home/main-info/main-info.component';
 import { AdvantagesCardComponent } from './routes/home/advantages-card/advantages-card.component';
+import { AuthComponent } from './routes/auth/auth.component';
+import { SigninComponent } from './routes/auth/signin/signin.component';
+import { SignupComponent } from './routes/auth/signup/signup.component';
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +25,10 @@ import { AdvantagesCardComponent } from './routes/home/advantages-card/advantage
     FooterComponent,
     HomeComponent,
     MainInfoComponent,
-    AdvantagesCardComponent
+    AdvantagesCardComponent,
+    AuthComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,9 @@ import { AdvantagesCardComponent } from './routes/home/advantages-card/advantage
     BrowserAnimationsModule,
     MatButtonModule,
     NgbModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

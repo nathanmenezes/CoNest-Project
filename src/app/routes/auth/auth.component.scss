@@ -1,0 +1,21 @@
+.page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .form-container{
+    background: #232323;
+    width: 690px;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form{
+      height: 100%;
+      .form-body{
+        height: 100%;
+      }
+    }
+  }
+}
