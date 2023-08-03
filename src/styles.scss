@@ -268,5 +268,14 @@ $altTheme: (
   background: #1C1C1C;
   color: #fff !important;
 }
+
+.mark-text{
+  color: #38a556;
+}
+
+.logo{
+  width: 120px;
+  height: 45px;
+}
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

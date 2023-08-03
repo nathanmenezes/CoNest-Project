@@ -5,7 +5,7 @@
     <p class="redirect-button">ONGs</p>
     <p class="redirect-button">Sobre Nós</p>
   </div>
-  <button class="login-button">Login</button>
+  <button class="login-button" routerLink="/auth">Login</button>
   <mat-icon class="side-menu-button" (click)="openSideDialog()" *ngIf="elementDisplay === 'none'">format_align_justify</mat-icon>
   <mat-icon class="side-menu-button" (click)="openSideDialog()" *ngIf="elementDisplay === 'flex'">close</mat-icon>
   <div class="side-menu" [ngStyle]="{ display: elementDisplay }">

@@ -1,1 +1,23 @@
-<p>signin works!</p>
+<form (ngSubmit)="onSubmit()" class="signin">
+  <div class="form-header">
+    <h2>
+      Entre na sua Conta
+    </h2>
+    <h4>
+      Preencha seus dados
+    </h4>
+  </div>
+  <div class="form-container">
+    <div class="form-inputs-container">
+      <div class="form-input">
+        <label>Email</label>
+        <input matInput [(ngModel)]="user.email" name="cpf" required/>
+      </div>
+      <div class="form-input">
+        <label>Senha</label>
+        <input matInput [(ngModel)]="user.password" name="name" type="password" required/>
+      </div>
+    </div>
+  </div>
+  <button mat-raised-button color="primary">Login</button>
+</form>

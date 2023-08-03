@@ -17,6 +17,8 @@ import { SigninComponent } from './routes/auth/signin/signin.component';
 import { SignupComponent } from './routes/auth/signup/signup.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { OngRegisterComponent } from './routes/auth/ong-register/ong-register.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import {FormsModule} from "@angular/forms";
     AdvantagesCardComponent,
     AuthComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    OngRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {FormsModule} from "@angular/forms";
     NgbModule,
     MatIconModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

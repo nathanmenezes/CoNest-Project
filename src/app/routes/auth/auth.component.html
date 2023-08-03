@@ -1,9 +1,26 @@
 <div class="background-dark page">
   <div class="form-container">
     <div class="form">
+      <div class="side-content">
+        <div class="side-container">
+          <img src="assets/dark-logo.png" class="logo">
+          <div class="side-container-content">
+            <h4>
+              {{signType ? 'Login' : 'Cadastro'}}
+            </h4>
+            <p>
+              {{signType ? 'Faça login para acessar a sua conta' : 'Cadastre-se para acessar a sua conta'}}
+            </p>
+            <p>{{signType ? 'Não possui uma conta?' : 'Já possui uma conta?'}}</p>
+            <a (click)="signType = !signType" class="mark-text">
+              {{signType ? 'Cadastre-se' : 'Faça login'}}
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="form-body">
-        <app-signup *ngIf="true"></app-signup>
-        <app-signin *ngIf="false"></app-signin>
+        <app-signup *ngIf="!signType"></app-signup>
+        <app-signin *ngIf="signType"></app-signin>
       </div>
     </div>
   </div>

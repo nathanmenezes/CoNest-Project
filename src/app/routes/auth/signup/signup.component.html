@@ -1,43 +1,55 @@
 <form (ngSubmit)="onSubmit()" class="signup">
-  <div class="form-header">
+  <div class="form-header" *ngIf="step < 3">
     <h2>
-      Crie sua conta
+      Crie sua Conta
     </h2>
     <h4>
       Preencha seus dados
     </h4>
   </div>
   <div class="form-container">
-    <div class="form-inputs-container">
-      <mat-form-field class="form-group">
-        <mat-label>Apelido</mat-label>
-        <input matInput [(ngModel)]="user.nickname" name="nickname" required/>
-      </mat-form-field>
-      <mat-form-field class="form-group">
-        <mat-label>CPF</mat-label>
+    <div class="form-inputs-container" *ngIf="step == 1">
+      <div class="form-input">
+        <label>CPF</label>
         <input matInput [(ngModel)]="user.cpf" name="cpf" required/>
-      </mat-form-field>
-    </div>
-    <div class="form-inputs-container">
-      <mat-form-field class="form-group col-md-6">
-        <mat-label>Nome</mat-label>
-        <input matInput [(ngModel)]="user.firstName" name="firstName" required/>
-      </mat-form-field>
-      <mat-form-field class="form-group col-md-6">
-        <mat-label>Sobrenome</mat-label>
+      </div>
+      <div class="form-input">
+        <label>Nome</label>
+        <input matInput [(ngModel)]="user.firstName" name="name" required/>
+      </div>
+      <div class="form-input">
+        <label>Sobrenome</label>
         <input matInput [(ngModel)]="user.lastName" name="lastName" required/>
-      </mat-form-field>
+      </div>
     </div>
-    <div class="form-inputs-container">
-      <mat-form-field class="form-group">
-        <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="user.email" name="email" required/>
-      </mat-form-field>
-      <mat-form-field class="form-group">
-        <input matInput [(ngModel)]="user.password" placeholder="Password" [type]="hide ? 'password' : 'text'" required>
-        <mat-icon style="color: #2c2c2c" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-      </mat-form-field>
+    <div class="form-inputs-container" *ngIf="step == 2">
+      <div class="form-input">
+        <label>Email</label>
+        <input matInput [(ngModel)]="user.email" name="cpf" required/>
+      </div>
+      <div class="form-input">
+        <label>Senha</label>
+        <input matInput [(ngModel)]="user.password" name="name" type="password" required/>
+      </div>
+      <div class="form-input">
+        <label>Apelido</label>
+        <input matInput [(ngModel)]="user.nickname" name="lastName" required/>
+      </div>
     </div>
+    <div *ngIf="step == 3">
+      <h4>
+        Seu cadastro foi realizado com sucesso!
+      </h4>
+      <p>
+        Caso você tenha interesse de cadastrar sua ONG na plataforma CoNest.
+      </p>
+      <div class="d-flex justify-content-around">
+        <button mat-raised-button color="primary" (click)="step = step +1">Cadastrar Minha ONG</button>
+        <button mat-raised-button color="primary" routerLink="/">Continuar</button>
+      </div>
+    </div>
+    <app-ong-register *ngIf="step == 4"></app-ong-register>
   </div>
-  <button mat-raised-button type="submit" color="primary">Sign Up</button>
+  <button *ngIf="step == 1" mat-raised-button (click)="nextStep()" color="primary">Próximo</button>
+  <button *ngIf="step == 2" mat-raised-button color="primary">Cadastrar</button>
 </form>
