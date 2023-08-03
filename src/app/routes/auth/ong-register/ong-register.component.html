@@ -1,0 +1,27 @@
+<form class="form-inputs-container ong">
+  <h3>
+    Cadastre sua ONG
+  </h3>
+  <div class="form-input">
+    <label>Nome da ONG</label>
+    <input matInput [(ngModel)]="ong.name" name="ongName" required/>
+  </div>
+  <div class="form-input">
+    <label>Descrição</label>
+    <input matInput [(ngModel)]="ong.description" name="description" required/>
+  </div>
+  <div class="form-input">
+    <label>Tour Link</label>
+    <input matInput [(ngModel)]="ong.tourLink" name="tour" required/>
+    <mat-hint>Crie o tour pela sua ong. <span style="cursor: pointer" class="mark-text" (click)="window.open('https://webobook.com/', '_blank')">Clique aqui</span> e veja como fazer.</mat-hint>
+  </div>
+  <div class="form-input">
+    <label>Categoria</label>
+    <input matInput [(ngModel)]="ong.category" name="category" required/>
+  </div>
+  <div class="form-input">
+    <label>CNPJ</label>
+    <input matInput [(ngModel)]="ong.cnpj" name="cnpj" required/>
+  </div>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Cadastrar ONG</button>
+</form>
